@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const cors = require('cors'); // Import cors
 
 const app = express();
-const port = 3000;
+const port = 4000;
 
 let classrooms = [
   { id: 1, name: 'Room A' },
@@ -14,7 +14,7 @@ let classrooms = [
 app.use(bodyParser.json());
 app.use(cors()); // Enable CORS
 
-app.get('/classrooms', (req, res) => {
+app.get('/', (req, res) => {
   res.json(classrooms);
 });
 
